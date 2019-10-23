@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+                <title>PINumFilter</title>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+<div style="color: red"> PI can be Assumed:</div>
+<div ng-app="DemoApp" ng-controller="DemoController">
+<p>This amount is {{amount | number:2}}</p>
+<p>This amount is {{amount | number:4}}</p>
+</div>
+
+
+
+<script>
+
+	var app = angular.module('DemoApp',[]);
+		app.controller('DemoController',['$scope',function($scope,$routeParams){
+		$scope.amount =3.141592653;
+		}
+	]
+);
+
+
+</script>
+
+</body>
+
+</html>

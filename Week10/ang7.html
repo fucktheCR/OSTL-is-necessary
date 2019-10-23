@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+                <title>JSON Format</title>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="jsCtrl">
+
+<h1>Customer:</h1>
+
+<pre>{{customer | json : 12}}</pre>
+
+</div>
+
+<script>
+
+var app = angular.module('myApp', []);
+
+app.controller('jsCtrl', function($scope) {
+    $scope.customer =
+    {
+
+        "name" : "",
+        "city" : "",
+        "country" : "India"
+
+    };
+});
+
+</script>
+
+<p>A JSON string with 12 spaces per indentation.</p>
+
+</body>
+
+</html>
